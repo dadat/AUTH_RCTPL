@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://api.isap.com/" xmlns:ns1="http://cxf.apache.org/bindings/xformat" name="COCRegistrationImplService" targetNamespace="http://api.isap.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema xmlns="http://api.isap.com/" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://api.isap.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:complexType name="registration">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="assuredName" type="xs:string" />
+          <xs:element minOccurs="0" name="assuredTin" type="xs:string" />
+          <xs:element minOccurs="0" name="authNo" type="xs:string" />
+          <xs:element minOccurs="0" name="chassisNo" type="xs:string" />
+          <xs:element minOccurs="0" name="cocNo" type="xs:string" />
+          <xs:element minOccurs="0" name="engineNo" type="xs:string" />
+          <xs:element minOccurs="0" name="errorMessage" type="xs:string" />
+          <xs:element minOccurs="0" name="expiryDate" type="xs:string" />
+          <xs:element minOccurs="0" name="inceptionDate" type="xs:string" />
+          <xs:element minOccurs="0" name="mvFileNo" type="xs:string" />
+          <xs:element minOccurs="0" name="mvPremType" type="xs:string" />
+          <xs:element minOccurs="0" name="mvType" type="xs:string" />
+          <xs:element minOccurs="0" name="password" type="xs:string" />
+          <xs:element minOccurs="0" name="plateNo" type="xs:string" />
+          <xs:element minOccurs="0" name="premiumType" type="xs:string" />
+          <xs:element minOccurs="0" name="regType" type="xs:string" />
+          <xs:element minOccurs="0" name="successMessage" type="xs:string" />
+          <xs:element minOccurs="0" name="taxType" type="xs:string" />
+          <xs:element minOccurs="0" name="username" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="register" type="tns:register" />
+      <xs:complexType name="register">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:registration" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="registerResponse" type="tns:registerResponse" />
+      <xs:complexType name="registerResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:registration" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="registerResponse">
+    <wsdl:part name="parameters" element="tns:registerResponse" />
+  </wsdl:message>
+  <wsdl:message name="register">
+    <wsdl:part name="parameters" element="tns:register" />
+  </wsdl:message>
+  <wsdl:portType name="COCRegistration">
+    <wsdl:operation name="register">
+      <wsdl:input name="register" message="tns:register" />
+      <wsdl:output name="registerResponse" message="tns:registerResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="COCRegistrationImplServiceSoapBinding" type="tns:COCRegistration">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="register">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="register">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="registerResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="COCRegistrationImplService">
+    <wsdl:port name="COCRegistrationImplPort" binding="tns:COCRegistrationImplServiceSoapBinding">
+      <soap:address location="https://cocaftest1.cloudapp.net/isapdev2_api/services/cocRegistration" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

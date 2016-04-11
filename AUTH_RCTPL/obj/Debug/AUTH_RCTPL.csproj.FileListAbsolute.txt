@@ -1,0 +1,12 @@
+c:\users\david\documents\visual studio 2013\Projects\AUTH_RCTPL\AUTH_RCTPL\bin\Debug\AUTH_RCTPL.exe.config
+C:\Users\David\documents\visual studio 2013\Projects\AUTH_RCTPL\AUTH_RCTPL\bin\Debug\AUTH_RCTPL.exe
+C:\Users\David\documents\visual studio 2013\Projects\AUTH_RCTPL\AUTH_RCTPL\bin\Debug\AUTH_RCTPL.pdb
+C:\Users\David\documents\visual studio 2013\Projects\AUTH_RCTPL\AUTH_RCTPL\bin\Debug\Mindscape.LightSpeed.dll
+C:\Users\David\documents\visual studio 2013\Projects\AUTH_RCTPL\AUTH_RCTPL\bin\Debug\Mindscape.LightSpeed.Linq.dll
+C:\Users\David\documents\visual studio 2013\Projects\AUTH_RCTPL\AUTH_RCTPL\bin\Debug\Mindscape.LightSpeed.xml
+C:\Users\David\documents\visual studio 2013\Projects\AUTH_RCTPL\AUTH_RCTPL\bin\Debug\Mindscape.LightSpeed.Linq.xml
+C:\Users\David\documents\visual studio 2013\Projects\AUTH_RCTPL\AUTH_RCTPL\obj\Debug\AUTH_RCTPL.frmAuth.resources
+C:\Users\David\documents\visual studio 2013\Projects\AUTH_RCTPL\AUTH_RCTPL\obj\Debug\AUTH_RCTPL.Properties.Resources.resources
+C:\Users\David\documents\visual studio 2013\Projects\AUTH_RCTPL\AUTH_RCTPL\obj\Debug\AUTH_RCTPL.csproj.GenerateResource.Cache
+C:\Users\David\documents\visual studio 2013\Projects\AUTH_RCTPL\AUTH_RCTPL\obj\Debug\AUTH_RCTPL.exe
+C:\Users\David\documents\visual studio 2013\Projects\AUTH_RCTPL\AUTH_RCTPL\obj\Debug\AUTH_RCTPL.pdb

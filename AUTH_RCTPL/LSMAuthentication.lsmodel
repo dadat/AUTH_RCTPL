@@ -1,0 +1,501 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<model xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.1.0.0" name="LSMAuthentication" targetNamespace="AUTH_RCTPL" databaseProvider="SqlServer2008" connectionString="Data Source=192.168.1.114;Initial Catalog=RCTPL;Persist Security Info=True;User ID=sa;Password=12345;Pooling=False" pluralizedInDatabase="false" mediumTrustCompatibility="false" xmlns="http://namespaces.mindscape.co.nz/lightspeed">
+  <entities>
+    <entity name="MPaip" identityType="Int64" cacheExpiry="0" tableName="M_PAIP" identityColumnName="PAIP_ID">
+      <entityProperties>
+        <entityProperty name="Papin" privateSetter="false">
+          <validations>
+            <presenceValidation />
+            <lengthValidation minimumLength="0" maximumLength="15" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="FirstName" isNullable="true" columnName="FIRST_NAME" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="50" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="MiddleName" isNullable="true" columnName="MIDDLE_NAME" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="50" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Palname" isNullable="true" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="50" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="CompanyName" isNullable="true" columnName="COMPANY_NAME" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="150" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="ByCompname" isNullable="true" columnName="BY_COMPNAME" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="1" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Paaddress" privateSetter="false">
+          <validations>
+            <presenceValidation />
+            <lengthValidation minimumLength="0" maximumLength="150" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="MvType" isNullable="true" columnName="MV_TYPE" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="20" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="VehicleClass" columnName="VEHICLE_CLASS" privateSetter="false">
+          <validations>
+            <presenceValidation />
+            <lengthValidation minimumLength="0" maximumLength="20" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="PlateNo" columnName="PLATE_NO" privateSetter="false">
+          <validations>
+            <presenceValidation />
+            <lengthValidation minimumLength="0" maximumLength="10" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="SerialNo" columnName="SERIAL_NO" privateSetter="false">
+          <validations>
+            <presenceValidation />
+            <lengthValidation minimumLength="0" maximumLength="40" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="MotorNo" columnName="MOTOR_NO" privateSetter="false">
+          <validations>
+            <presenceValidation />
+            <lengthValidation minimumLength="0" maximumLength="40" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="SeatingCapacity" columnName="SEATING_CAPACITY" privateSetter="false">
+          <validations>
+            <presenceValidation />
+            <lengthValidation minimumLength="0" maximumLength="20" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="ModelYr" columnName="MODEL_YR" privateSetter="false">
+          <validations>
+            <presenceValidation />
+            <lengthValidation minimumLength="0" maximumLength="20" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="CoverageYr" columnName="COVERAGE_YR" privateSetter="false">
+          <validations>
+            <presenceValidation />
+            <lengthValidation minimumLength="0" maximumLength="5" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Make" privateSetter="false">
+          <validations>
+            <presenceValidation />
+            <lengthValidation minimumLength="0" maximumLength="25" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Series" privateSetter="false">
+          <validations>
+            <presenceValidation />
+            <lengthValidation minimumLength="0" maximumLength="20" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="ServiceType" isNullable="true" columnName="SERVICE_TYPE" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="20" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Color" privateSetter="false">
+          <validations>
+            <presenceValidation />
+            <lengthValidation minimumLength="0" maximumLength="20" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="UnWeight" columnName="UN_WEIGHT" privateSetter="false">
+          <validations>
+            <presenceValidation />
+            <lengthValidation minimumLength="0" maximumLength="50" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="AssuredTin" columnName="ASSURED_TIN" privateSetter="false">
+          <validations>
+            <presenceValidation />
+            <lengthValidation minimumLength="0" maximumLength="50" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="InsuredFrom" dataType="DateTime" columnName="INSURED_FROM" privateSetter="false" />
+        <entityProperty name="InsuredTo" dataType="DateTime" columnName="INSURED_TO" privateSetter="false" />
+        <entityProperty name="Remarks" isNullable="true" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="50" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="TaxType" isNullable="true" columnName="TAX_TYPE" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="50" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="PlaceIssued" isNullable="true" columnName="PLACE_ISSUED" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="20" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="MvFileno" columnName="MV_FILENO" privateSetter="false">
+          <validations>
+            <presenceValidation />
+            <lengthValidation minimumLength="0" maximumLength="50" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Paregister" dataType="DateTime" isNullable="true" privateSetter="false" />
+        <entityProperty name="CompId" isNullable="true" columnName="COMP_ID" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="12" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="BltFileno" isNullable="true" columnName="BLT_FILENO" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="20" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="BusProf" isNullable="true" columnName="BUS_PROF" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="20" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="NoDays" dataType="Decimal" isNullable="true" columnName="NO_DAYS" privateSetter="false" />
+        <entityProperty name="ProRata" isNullable="true" columnName="PRO_RATA" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="1" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Fleet" dataType="Decimal" isNullable="true" privateSetter="false" />
+        <entityProperty name="Fuel" privateSetter="false">
+          <validations>
+            <presenceValidation />
+            <lengthValidation minimumLength="0" maximumLength="30" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Branch" isNullable="true" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="10" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="NonLto" isNullable="true" columnName="NON_LTO" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="1" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="VehicleType" isNullable="true" columnName="VEHICLE_TYPE" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="20" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="TypeBody" columnName="TYPE_BODY" privateSetter="false">
+          <validations>
+            <presenceValidation />
+            <lengthValidation minimumLength="0" maximumLength="50" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="UploadedCode" isNullable="true" columnName="UPLOADED_CODE" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="50" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="UploadedDate" dataType="DateTime" isNullable="true" columnName="UPLOADED_DATE" privateSetter="false" />
+        <entityProperty name="RiskCode" isNullable="true" columnName="RISK_CODE" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="10" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="ConductionSticker" isNullable="true" columnName="CONDUCTION_STICKER" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="20" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="MarketSegment" isNullable="true" columnName="MARKET_SEGMENT" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="50" />
+          </validations>
+        </entityProperty>
+      </entityProperties>
+    </entity>
+    <entity name="TBillchrgh" identityType="Int64" cacheExpiry="0" tableName="T_BILLCHRGH" identityColumnName="BILLH_ID">
+      <entityProperties>
+        <entityProperty name="Bchchrgno" privateSetter="false">
+          <validations>
+            <presenceValidation />
+            <lengthValidation minimumLength="0" maximumLength="30" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Papin" isNullable="true" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="15" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Trkid" isNullable="true" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="12" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Bchdte" dataType="DateTime" isNullable="true" privateSetter="false" />
+        <entityProperty name="Usrid" isNullable="true" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="50" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Pkcd" isNullable="true" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="6" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="UploadedCode" isNullable="true" columnName="UPLOADED_CODE" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="50" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="UploadedDate" dataType="DateTime" isNullable="true" columnName="UPLOADED_DATE" privateSetter="false" />
+      </entityProperties>
+    </entity>
+    <entity name="TBillchrgd" identityType="Int64" cacheExpiry="0" tableName="T_BILLCHRGD" identityColumnName="BILLD_ID">
+      <entityProperties>
+        <entityProperty name="Bchchrgno" privateSetter="false">
+          <validations>
+            <presenceValidation />
+            <lengthValidation minimumLength="0" maximumLength="30" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Bcdseries" dataType="Int32" privateSetter="false" />
+        <entityProperty name="Bcditmcd" privateSetter="false">
+          <validations>
+            <presenceValidation />
+            <lengthValidation minimumLength="0" maximumLength="12" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Bcdesc" privateSetter="false">
+          <validations>
+            <presenceValidation />
+            <lengthValidation minimumLength="0" maximumLength="125" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Bcdqty" dataType="Int32" privateSetter="false" />
+        <entityProperty name="Bcdsp" dataType="Decimal" privateSetter="false" />
+        <entityProperty name="Bcdpatcover" dataType="Decimal" isNullable="true" privateSetter="false" />
+        <entityProperty name="Bcdpatbal" dataType="Decimal" isNullable="true" privateSetter="false" />
+        <entityProperty name="Bcdtppcover" dataType="Decimal" isNullable="true" privateSetter="false" />
+        <entityProperty name="Disccd" isNullable="true" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="5" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Tpcd" isNullable="true" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="8" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Bcdtpptag" isNullable="true" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="1" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Colornum" isNullable="true" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="15" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Bcdsino" isNullable="true" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="12" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Bcdtppbal" dataType="Decimal" isNullable="true" privateSetter="false" />
+        <entityProperty name="DocStamp" dataType="Decimal" isNullable="true" columnName="DOC_STAMP" privateSetter="false" />
+        <entityProperty name="EVat" dataType="Decimal" isNullable="true" columnName="E_VAT" privateSetter="false" />
+        <entityProperty name="Lgt" dataType="Decimal" isNullable="true" privateSetter="false" />
+        <entityProperty name="SumInsired" dataType="Decimal" isNullable="true" columnName="SUM_INSIRED" privateSetter="false" />
+        <entityProperty name="CompFee" dataType="Decimal" isNullable="true" columnName="COMP_FEE" privateSetter="false" />
+        <entityProperty name="CertFee" dataType="Decimal" isNullable="true" columnName="CERT_FEE" privateSetter="false" />
+        <entityProperty name="BasicPremium" dataType="Decimal" isNullable="true" columnName="BASIC_PREMIUM" privateSetter="false" />
+        <entityProperty name="DocOr" isNullable="true" columnName="DOC_OR" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="15" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Coi" isNullable="true" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="20" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Commission" dataType="Decimal" isNullable="true" privateSetter="false" />
+        <entityProperty name="AuthenCode" isNullable="true" columnName="AUTHEN_CODE" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="20" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="TaxAmt" dataType="Decimal" isNullable="true" columnName="TAX_AMT" privateSetter="false" />
+        <entityProperty name="WithCom" isNullable="true" columnName="WITH_COM" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="1" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="WTax" dataType="Decimal" isNullable="true" columnName="W_TAX" privateSetter="false" />
+        <entityProperty name="WTaxNet" dataType="Decimal" isNullable="true" columnName="W_TAX_NET" privateSetter="false" />
+        <entityProperty name="NoDays" dataType="Decimal" isNullable="true" columnName="NO_DAYS" privateSetter="false" />
+        <entityProperty name="ProRata" isNullable="true" columnName="PRO_RATA" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="1" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="RegType" isNullable="true" columnName="REG_TYPE" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="5" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="TransType" isNullable="true" columnName="TRANS_TYPE" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="5" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Region" isNullable="true" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="10" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="EndoNo" isNullable="true" columnName="ENDO_NO" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="20" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="UploadedCode" isNullable="true" columnName="UPLOADED_CODE" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="50" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="UploadedDate" dataType="DateTime" isNullable="true" columnName="UPLOADED_DATE" privateSetter="false" />
+        <entityProperty name="LtfrbDcode" isNullable="true" columnName="LTFRB_DCODE" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="50" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="LtfrbDdate" dataType="DateTime" isNullable="true" columnName="LTFRB_DDATE" privateSetter="false" />
+        <entityProperty name="VehicleNumber" isNullable="true" columnName="VEHICLE_NUMBER" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="20" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Refund" dataType="Decimal" isNullable="true" privateSetter="false" />
+        <entityProperty name="OthChrges" dataType="Decimal" isNullable="true" columnName="OTH_CHRGES" privateSetter="false" />
+        <entityProperty name="Taxes" dataType="Decimal" isNullable="true" privateSetter="false" />
+        <entityProperty name="CanPolicy" isNullable="true" columnName="CAN_POLICY" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="1" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="DateCancel" dataType="DateTime" isNullable="true" columnName="DATE_CANCEL" privateSetter="false" />
+        <entityProperty name="CanUser" isNullable="true" columnName="can_user" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="50" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Prnt" isNullable="true" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="50" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="DatePrinted" dataType="DateTime" isNullable="true" columnName="DATE_PRINTED" privateSetter="false" />
+        <entityProperty name="RefNum" isNullable="true" columnName="REF_NUM" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="50" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Datepaid" dataType="DateTime" isNullable="true" privateSetter="false" />
+        <entityProperty name="VehicleCode" isNullable="true" columnName="VEHICLE_CODE" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="50" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="CompShare" dataType="Decimal" isNullable="true" columnName="COMP_SHARE" privateSetter="false" />
+        <entityProperty name="TppShare" dataType="Decimal" isNullable="true" columnName="TPP_SHARE" privateSetter="false" />
+        <entityProperty name="QrImage" dataType="Blob" isNullable="true" columnName="QR_IMAGE" privateSetter="false" />
+        <entityProperty name="Ctpl" dataType="Decimal" isNullable="true" privateSetter="false" />
+        <entityProperty name="Pl" dataType="Decimal" isNullable="true" privateSetter="false" />
+        <entityProperty name="AuthenFee" dataType="Decimal" isNullable="true" columnName="AUTHEN_FEE" privateSetter="false" />
+        <entityProperty name="Municipality" isNullable="true" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="10" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="CocSeries" isNullable="true" columnName="COC_SERIES" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="10" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="BayadCenter" dataType="Decimal" isNullable="true" columnName="BAYAD_CENTER" privateSetter="false" />
+        <entityProperty name="RiskCode" isNullable="true" columnName="RISK_CODE" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="10" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="LgtRate" dataType="Decimal" isNullable="true" columnName="LGT_RATE" privateSetter="false" />
+        <entityProperty name="InceptionFrom" dataType="DateTime" isNullable="true" columnName="INCEPTION_FROM" privateSetter="false" />
+        <entityProperty name="InceptionTo" dataType="DateTime" isNullable="true" columnName="INCEPTION_TO" privateSetter="false" />
+        <entityProperty name="ChargesOr" isNullable="true" columnName="CHARGES_OR" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="20" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="WTaxShare" dataType="Decimal" isNullable="true" columnName="W_TAX_SHARE" privateSetter="false" />
+        <entityProperty name="WithClaims" isNullable="true" columnName="WITH_CLAIMS" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="1" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="ClaimBranch" isNullable="true" columnName="CLAIM_BRANCH" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="10" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="AgentOr" isNullable="true" columnName="AGENT_OR" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="10" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="AgentOrDate" dataType="DateTime" isNullable="true" columnName="AGENT_OR_DATE" privateSetter="false" />
+        <entityProperty name="AgentOrAmount" dataType="Decimal" isNullable="true" columnName="AGENT_OR_AMOUNT" privateSetter="false" />
+        <entityProperty name="BatchCode" isNullable="true" columnName="BATCH_CODE" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="50" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="AuthenticationMessage" isNullable="true" columnName="AUTHENTICATION_MESSAGE" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="150" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="AuthenStatus" isNullable="true" columnName="AUTHEN_STATUS" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="1" />
+          </validations>
+        </entityProperty>
+      </entityProperties>
+    </entity>
+    <entity name="TblBilldhist" identityType="Int64" cacheExpiry="0" tableName="TBL_BILLDHIST">
+      <entityProperties>
+        <entityProperty name="Coi" isNullable="true" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="20" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="AuthenCode" isNullable="true" columnName="AUTHEN_CODE" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="20" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="AuthenticationMessage" isNullable="true" columnName="AUTHENTICATION_MESSAGE" privateSetter="false">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="150" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="DateTrans" dataType="DateTime" isNullable="true" columnName="DATE_TRANS" privateSetter="false" />
+      </entityProperties>
+    </entity>
+  </entities>
+</model>
